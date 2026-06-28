@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "No For You for X/Twitter",
+  "version": "0.8.0",
+  "description": "Removes the For you tab on X/Twitter and keeps the Home timeline focused on Following.",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://x.com/*",
+        "*://mobile.x.com/*",
+        "*://twitter.com/*",
+        "*://mobile.twitter.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "*://x.com/*",
+    "*://mobile.x.com/*",
+    "*://twitter.com/*",
+    "*://mobile.twitter.com/*"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{no-for-you-x-twitter@trtrtr70}",
+      "strict_min_version": "109.0"
+    }
+  }
+}
